@@ -1,0 +1,16 @@
+[versions]
+jaxb = "4.0.3"
+jaxbApi = "2.3.1"
+jwsApi = "1.1"
+
+
+[libraries]
+jwsApi = { module = "javax.jws:javax.jws-api", version.ref = "jwsApi" }
+jaxbImpl = { module = "com.sun.xml.bind:jaxb-impl", version.ref = "jaxb" }
+jaxbApi = { module = "javax.xml.bind:jaxb-api", version.ref = "jaxbApi" }
+jaxwsApi = { module = "javax.xml.ws:jaxws-api", version.ref = "jaxbApi" }
+
+[bundles]
+cxfCodegen = ["jwsApi", "jaxbImpl", "jaxbApi", "jaxwsApi"]
+
+[plugins]
